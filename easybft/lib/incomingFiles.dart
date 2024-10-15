@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:all_bluetooth/all_bluetooth.dart';
 
 class IncomingFilesScreen extends StatefulWidget {
   final VoidCallback toggleTheme;
   final bool isDarkMode;
+  final dynamic allBluetooth;
 
-  const IncomingFilesScreen({required this.toggleTheme, required this.isDarkMode, Key? key}) : super(key: key);
+  const IncomingFilesScreen({required this.toggleTheme, required this.isDarkMode, required this.allBluetooth, Key? key}) : super(key: key);
 
   @override
   _IncomingFilesScreenState createState() => _IncomingFilesScreenState();
 }
 
 class _IncomingFilesScreenState extends State<IncomingFilesScreen> {
-  List<Map<String, dynamic>> incomingFiles = [
-  ];
+  List<Map<String, dynamic>> incomingFiles = [];
 
   // Placeholder de Download. Ainda vamos adicionar isso.
   void _downloadFile(int index) {
@@ -44,7 +45,7 @@ class _IncomingFilesScreenState extends State<IncomingFilesScreen> {
               height: 40,
             ),
             const SizedBox(width: 10),
-            const Text('Incoming Files'),
+            const Text('Easy BFT'),
           ],
         ),
         actions: [
